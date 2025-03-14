@@ -1,12 +1,5 @@
-import NavBar from "./Componet/navBar/NavBar";
-
-
+// import NavBar from "./componet/navBar/NavBar";
 
 export default function App() {
-  return (
-    <div className="grid">
-      <NavBar/>
-      
-    </div>
-  );
+  return <div className="grid"></div>;
 }
