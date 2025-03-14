@@ -7,12 +7,12 @@ const LoginForm = () => {
     <form>
       <input type="text" placeholder="Username" 
       className="w-full p-3 border border-blue-300 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-      required />
+       />
       <input type="password" placeholder="Password"
-      className="w-full p-3 border border-blue-300 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-      required />
+      className=" p-3 border border-blue-300 mb-4 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
+      />
       <button type="submit"
-      className="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition duration-300">Login</button>
+      className=" bg-blue-500  p-3 rounded-lg w-full hover:bg-blue-600 transition text-white duration-300">Login</button>
       <a href="#"
       className="flex items-center justify-center text-blue-500 mt-4 hover:text-yellow-500 transition duration-300">Forgot your password?</a>
     </form>
