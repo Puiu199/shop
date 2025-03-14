@@ -1,9 +1,13 @@
+import { Routes, Route } from "react-router";
+import { routerList } from "./router";
 
- export default function App() {
+export default function App() {
+  
   return (
-    <div>
-     
-     
-    </div>
+    <Routes>
+      {routerList.map((route) => {
+        return <Route key={route.path} path={route.path} element={route.element} />;
+      })}
+    </Routes>
   );
 }
