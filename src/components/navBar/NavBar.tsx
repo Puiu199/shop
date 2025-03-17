@@ -19,12 +19,12 @@ export default function NavBar() {
         <ul className="flex ">
           <li className="w-9">
             <a href="/login">
-              <img src="src/assets/img/icons/authenticity.png" alt="" />
+              <img src="src/assets/icons/authenticity.png" alt="" />
             </a>
           </li>
           <li className="w-9 ">
             <Link to="/register">
-              <img src="src/assets/img/icons/sign-up.png" alt="" />
+              <img src="src/assets/icons/sign-up.png" alt="" />
             </Link>
           </li>
         </ul>

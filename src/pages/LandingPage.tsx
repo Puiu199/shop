@@ -1,6 +1,6 @@
 export default function LandingPage() {
   return (
-    <div className="relative min-h-screen bg-[url(src/images/bg2.jpg)] bg-cover bg-center">
+    <div className="relative min-h-screen bg-[url(src/assets/img/bg2.jpg)] bg-cover bg-center">
       <div className="relative z-10  max-w-4xl mx-auto px-6 py-16 sm:py-24 md:py-32">
         <h1 className="text-14xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">
           Welcome to Ulim Wolfs – Where Quality Meets Convenience!

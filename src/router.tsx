@@ -3,6 +3,8 @@ import Register from "./pages/Register";
 import LoginPage from "./pages/LoginPage";
 import AboutAs from "./pages/AboutAs";
 import LayoutNavBar from "./components/layout/LayoutNavBar";
+import ErrorPage from "./pages/ErrorPage";
+import Products from "./pages/Products";
 
 export const routerList = [
   {
@@ -38,10 +40,18 @@ export const routerList = [
     ),
   },
   {
+    path:"/products",
+    element:(
+      <LayoutNavBar>
+        <Products />
+      </LayoutNavBar>
+    )
+  },
+  {
     path: "*",
     element: (
       <LayoutNavBar>
-        <LandingPage />
+        <ErrorPage />
       </LayoutNavBar>
     ),
   },
