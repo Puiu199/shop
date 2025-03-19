@@ -4,7 +4,7 @@ const AboutAs = () => {
   const navigate = useNavigate();
   return (
     // bg set !!!
-    <div className="relative min-h-screen bg-[url(src/images/NEUMORPHIC_CIRCLES_BACKGROUND.jpg)] bg-cover bg-center">
+    <div className="relative min-h-screen bg-[url(src/assets/img/NEUMORPHIC_CIRCLES_BACKGROUND.jpg)] bg-cover bg-center">
       {/* <div className="absolute inset-0 bg-black bg-opacity-50"></div> */}
 
       <div className="relative z-10 text-left max-w-4xl mx-auto px-6 py-16 sm:py-24 md:py-32">
@@ -15,7 +15,7 @@ const AboutAs = () => {
             onClick={() => {
               navigate("/");
             }}
-            className="text-4xl sm:text-5xl font-extrabold  text-black mb-4 leading-tight"
+            className="text-4xl sm:text-5xl font-extrabold  mb-4 leading-tight"
           >
             Welcome to Ulim Wolfs!
           </h1>
