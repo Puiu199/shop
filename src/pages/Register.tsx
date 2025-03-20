@@ -1,19 +1,33 @@
-import {  useState } from "react";
+import {  use, useState } from "react";
 import { register } from "../api/requests";
 import { useNavigate } from "react-router";
+
+const pattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/;
 
 const Register = () => {
     const navigate = useNavigate()
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
+  const [emailErrors, setEmailError] = useState<string>("")
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [errorPasswod,setPasswordError] = useState<string>("")
+  
 
   const handleLogin = () => {
+    if(!pattern.test(password)){
+        setPasswordError("Have to contain UpeecaseLetter,symbols, numbers")
+    } else {
+      setPasswordError("")
+    }
+
+
     if (email && password && confirmPassword) {
+
       if (password !== confirmPassword) {
         return console.log("Password doesn't match");
       }
+
       const registerData = {
         firstName: name,
         email: email,
@@ -26,10 +40,23 @@ console.log(registerData );
          localStorage.setItem("accessToken",response.data.accessToken)
          localStorage.setItem("refreshToken",response.data.refreshToken)
          navigate("/products")
-        });
+        }).catch((error) =>{
+          if(error.response.data.message){
+            setEmailError(error.response.data.message)
+          }
+
+
+          
+        })
         
     }
   };
+
+
+
+
+
+
 
   return (
     <div className="flex items-center justify-center w-full h-screen bg-[#b0c0fa]">
@@ -45,6 +72,8 @@ console.log(registerData );
               placeholder="Enter your name"
               type="text"
             />
+           
+           
           </div>
           <div className="my-2">
             <label className="text-lg font-medium">Email</label>
@@ -54,6 +83,7 @@ console.log(registerData );
               placeholder="Enter your email"
               type="text"
             />
+             {emailErrors  && <label className="text-lg font-medium text-red-800">{emailErrors}</label> }
           </div>
           <div className="my-2">
             <label className="text-lg font-medium">Password</label>
@@ -63,7 +93,9 @@ console.log(registerData );
               placeholder="Enter your password"
               type="password"
             />
+             {errorPasswod  && <label className="text-lg font-medium text-red-800">{errorPasswod}</label> }
           </div>
+
           <div className="my-2">
             <label className="text-lg font-medium">Confirm Password</label>
             <input
