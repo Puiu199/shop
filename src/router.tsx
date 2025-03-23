@@ -4,7 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import AboutAs from "./pages/AboutAs";
 import LayoutNavBar from "./components/layout/LayoutNavBar";
 import ErrorPage from "./pages/ErrorPage";
-import Products from "./pages/Products";
+import Products from "./pages/products/Products";
 
 export const routerList = [
   {
@@ -40,12 +40,8 @@ export const routerList = [
     ),
   },
   {
-    path:"/products",
-    element:(
-      <LayoutNavBar>
-        <Products />
-      </LayoutNavBar>
-    )
+    path: "/products",
+    element: <Products />,
   },
   {
     path: "*",
