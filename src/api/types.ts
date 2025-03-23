@@ -10,3 +10,9 @@ export interface LoginDto {
   firstName?: string;
   lastName?: string;
 }
+
+export interface ProductDto {
+  name: string;
+  price: number;
+  category: string;
+}
