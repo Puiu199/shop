@@ -1,12 +1,12 @@
-import "./products.css";
-import "../../assets/icons/av6584c34aabb39f00a10.png";
+import "./../assets/icons/av6584c34aabb39f00a10.png";
 import Tabel from "../components/products/Tabel";
+import UserNaviBar from "../components/products/UserNaviBar";
 const Products = () => {
   return (
     <div>
       <div className="flex items-start justify-between mx-auto w-full h-[718px]">
-        <div className="flex flex-col justify-between w-[20%] h-full bg-black">
-          <div className="w-full h-[50%]">
+        <div className="flex flex-col justify-between w-[20%] h-full">
+          {/* <div className="w-full h-[50%]">
             <ul className="flex flex-col justify-evenly">
               <li className=" text-white text-lg my-[15%]">
                 <a href="/">Home</a>
@@ -25,7 +25,8 @@ const Products = () => {
                 <a href="/login">Login</a>
               </li>
             </ul>
-          </div>
+          </div> */}
+          <UserNaviBar />
         </div>
 
         <div className="w-[75%] h-full flex flex-col justify-between">
