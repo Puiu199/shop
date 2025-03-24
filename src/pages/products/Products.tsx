@@ -1,5 +1,6 @@
 import "./products.css";
 import "../../assets/icons/av6584c34aabb39f00a10.png";
+import Tabel from "../../components/products/Tabel";
 const Products = () => {
   return (
     <div>
@@ -38,7 +39,7 @@ const Products = () => {
               <div className="w-full bg-blue-700 h-[45%] rounded-lg"></div>
             </div>
           </div>
-          <div className="w-full h-[30%] bg-blue-300 rounded-lg"></div>
+          <Tabel />
         </div>
       </div>
     </div>
