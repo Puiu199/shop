@@ -23,3 +23,15 @@ export interface ProductDto {
   price: number;
   category: string;
 }
+
+export interface UserDto {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  deletedAt: Date;
+  email: string;
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  role: string;
+}
