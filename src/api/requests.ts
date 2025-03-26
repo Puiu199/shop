@@ -26,6 +26,7 @@ export const createProduct = async (productData: ProductDto): Promise<ProductDto
   return await axiosClient.post("/product", productData);
 };
 
+
 export const getUser = async (): Promise<UserDto> => {
-  return await axiosClient.get("/user/profile/myself").then((response) => response.data);
-};
+    return await axiosClient.get("/user/profile/myself").then(response => response.data)
+}

@@ -1,6 +1,6 @@
 const Tabel = () => {
   return (
-    <div className="border border-red-500 rounded-lg p-6 h-auto bg-slate-100">
+    <div className="border border-red-500 rounded-lg p-6 h-auto bg-slate-100 mt-5">
       <div className="flex flex-row justify-between items-center mb-4">
         <h1 className="font-bold text-gray-900 text-2xl">Products</h1>
         <div className="border border-red-500 rounded-md w-auto cursor-pointer font-bold hover:bg-amber-500 p-2 transition-all duration-300">
