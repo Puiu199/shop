@@ -1,6 +1,7 @@
 import "./../assets/icons/av6584c34aabb39f00a10.png";
 import Tabel from "../components/products/Tabel";
 import UserNaviBar from "../components/products/UserNaviBar";
+import ProductForm from "../components/products/ProductForm";
 const Products = () => {
   return (
     <div>
@@ -29,17 +30,21 @@ const Products = () => {
           <UserNaviBar />
         </div>
 
+
         <div className="w-[75%] h-full flex flex-col justify-between">
           <div className="w-full h-[10%]">
-            <h1>Welcome!</h1>
+            
           </div>
-          <div className="w-full h-1/2 flex justify-between">
-            <div className="h-full w-[60%] bg-red-700 rounded-lg"></div>
+          <div className="w-full h-3/4 flex justify-between">
+            {/* <div className="h-full w-[60%] bg-red-700 rounded-lg"></div>
             <div className="h-full w-[35%] flex items-end flex-col justify-between">
               <div className="w-full bg-blue-700 h-[45%] rounded-lg "></div>
               <div className="w-full bg-blue-700 h-[45%] rounded-lg"></div>
-            </div>
+            </div> */}
+          <ProductForm />
+
           </div>
+
           <Tabel />
         </div>
       </div>
