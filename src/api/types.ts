@@ -24,6 +24,11 @@ export interface ProductDto {
   category: string;
 }
 
+export interface ChangeProductDto {
+  name?: string;
+  price?: number;
+  category?: string;
+}
 export interface UserDto {
   id: string;
   createdAt: Date;
