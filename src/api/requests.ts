@@ -34,6 +34,6 @@ export const changeProduct = async (productId: string, productData: ChangeProduc
   return await axiosClient.patch(`/product/${productId}`, productData);
 };
 
-export const changeUserDto = async (userData: ChangeUserDto) => {
+export const changeUser = async (userData: ChangeUserDto) => {
   return await axiosClient.patch(`/user/profile/`, userData);
 };
