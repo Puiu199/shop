@@ -1,8 +1,13 @@
 import { UserDto } from "../../api/types";
 import { getUser } from "../../api/requests";
 import { useQuery } from "@tanstack/react-query";
+import useUserStore from "../../store/useUserStore";
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 export default function UserNaviBar() {
+  const navigate = useNavigate()
+  const { setUser } = useUserStore();
   const {
     data: user,
     isLoading,
@@ -12,6 +17,10 @@ export default function UserNaviBar() {
     queryKey: ["get-my-user"],
     queryFn: getUser,
   });
+
+  useEffect(() => {
+    setUser(user || null);
+  }, [user]);
 
   // const [user, setUser] = useState<UserDto | null>(null);
   // const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -68,12 +77,12 @@ export default function UserNaviBar() {
           📦 Products
         </a>
 
-        <a
-          href="/settings"
+        <div
+        onClick={() => navigate("/settings")}
           className="w-full py-3 text-center hover:bg-gray-100 transition-colors text-white-600 hover:text-gray-900"
         >
           ⚙️ Settings
-        </a>
+        </div>
 
         <a
           href="#basket"

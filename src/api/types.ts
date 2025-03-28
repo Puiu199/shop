@@ -41,7 +41,7 @@ export interface UserDto {
   deletedAt?: Date;
 }
 export interface ChangeUserDto {
-  firstName: string;
-  lastName: string;
-  phoneNumber: string;
+  firstName?: string;
+  lastName?: string;
+  phoneNumber?: string;
 }
