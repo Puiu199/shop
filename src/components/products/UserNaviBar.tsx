@@ -31,7 +31,7 @@ export default function UserNaviBar() {
   // }, []);
 
   return (
-    <div className="h-screen w-50  text-white  bg-linear-to-t from-black to-green-700 shadow-lg fixed left-0 top-0 flex flex-col items-center py-6 space-y-6">
+    <div className="h-screen w-50  text-white  bg-linear-to-t from-black to-green-700 shadow-lg left-0 top-0 flex flex-col items-center py-6 space-y-6">
       {isLoading ? (
         <span className="loader"></span>
       ) : (

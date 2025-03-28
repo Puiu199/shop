@@ -19,7 +19,7 @@ const ProductForm = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-1 m-5 rounded-lg shadow-lg w-1/3 h-full">
+      <div className="flex flex-col items-center justify-center gap-1  ml-4 rounded-lg shadow-lg w-1/3 h-full">
         <AddProductForm />
 
         <ChangeProductForm />
