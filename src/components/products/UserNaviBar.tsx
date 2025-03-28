@@ -31,7 +31,7 @@ export default function UserNaviBar() {
   // }, []);
 
   return (
-    <div className="h-screen w-50  text-white  bg-linear-to-t from-black to-green-700 shadow-lg fixed left-0 top-0 flex flex-col items-center py-6 space-y-6">
+    <div className="h-screen w-90  text-white  bg-linear-to-t from-black to-green-700 shadow-lg flex flex-col items-center py-6 space-y-6">
       {isLoading ? (
         <span className="loader"></span>
       ) : (
@@ -40,7 +40,11 @@ export default function UserNaviBar() {
             <span>{error.message}</span>
           ) : (
             <div className="mb-8">
-              {`${user?.firstName || ""} ${user?.lastName || "No name"}`}
+              {`${user?.firstName || ""} ${user?.firstName || "No name"}`}
+              <br />
+              {`${user?.lastName || ""} ${user?.lastName || "No Last Name"}`}
+              <br />
+              {`${user?.phoneNumber || ""} ${user?.phoneNumber || "No Phone Number"}`}
               <br />
               <span>{user?.email || ""} </span>
               <br />
@@ -65,7 +69,7 @@ export default function UserNaviBar() {
         </a>
 
         <a
-          href="#settings"
+          href="/settings"
           className="w-full py-3 text-center hover:bg-gray-100 transition-colors text-white-600 hover:text-gray-900"
         >
           ⚙️ Settings

@@ -5,6 +5,7 @@ import AboutAs from "./pages/AboutAs";
 import LayoutNavBar from "./components/layout/LayoutNavBar";
 import ErrorPage from "./pages/ErrorPage";
 import Products from "./pages/Products";
+import Settings from "./pages/Settings";
 
 export const routerList = [
   {
@@ -43,6 +44,15 @@ export const routerList = [
     path: "/products",
     element: <Products />,
   },
+  {
+    path: "/settings",
+    element: (
+      <LayoutNavBar>
+        <Settings />
+      </LayoutNavBar>
+    ),
+  },
+
   {
     path: "*",
     element: (

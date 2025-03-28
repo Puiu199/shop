@@ -1,33 +1,37 @@
-import { Link } from "react-router";
-
 export default function NavBar() {
   return (
-    <nav className="flex py-5  px-2 mx-36">
-      <div className="size-14">Logo</div>
-      <ul className=" flex size-14 grow bor">
-        <li className="text-blue-500 hover:text-blue-800 mx-5 cursor-pointer">
-          <a href="/">Home</a>
+    <nav className="flex items-center justify-between bg-violet-950 px-6 py-3 text-white">
+      <ul className="flex flex-row justify-center space-x-8">
+        <li>
+          <a href="/" className="text-white hover:text-blue-300 transition">
+            Home
+          </a>
         </li>
-        <li className="text-blue-500 hover:text-blue-800 mx-5 cursor-pointer">
-          <a href="/aboutus">AboutUs</a>
+        <li>
+          <a href="/aboutus" className="text-white hover:text-blue-300 transition">
+            About Us
+          </a>
         </li>
-        <li className="text-blue-500 hover:text-blue-800 mx-5 cursor-pointer">
-          <a href=""></a>
+        <li>
+          <a href="/services" className="text-white hover:text-blue-300 transition">
+            Services
+          </a>
         </li>
       </ul>
-      <div className=" flex-none">
-        <ul className="flex ">
-          <li className="w-9">
-            <a href="/login">
-              <img src="src/assets/icons/authenticity.png" alt="" />
-            </a>
-          </li>
-          <li className="w-9 ">
-            <Link to="/register">
-              <img src="src/assets/icons/sign-up.png" alt="" />
-            </Link>
-          </li>
-        </ul>
+
+      <div className="flex space-x-4">
+        <a
+          href="/login"
+          className="px-4 py-2 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-700 transition"
+        >
+          Login
+        </a>
+        <a
+          href="/register"
+          className="px-4 py-2 border border-gray-300 text-gray-300 font-semibold rounded-lg hover:bg-gray-300 hover:text-blue-700 transition"
+        >
+          Register
+        </a>
       </div>
     </nav>
   );
