@@ -4,22 +4,15 @@ import UserNaviBar from "../components/products/UserNaviBar";
 import ProductForm from "../components/products/ProductForm";
 const Products = () => {
   return (
-    <div>
-      <div className="flex items-start justify-between mx-auto w-full h-[718px]">
-        <div className="flex flex-col justify-between w-[20%] h-full">
-        
+    <div className="bg-gradient-to-b from-gray-900 to-green-900 min-h-screen">
+      <div className=" w-[90%] h-[100vh] m-auto flex flex-row justify-between">
+        <div>
           <UserNaviBar />
         </div>
 
-
-        <div className="w-[75%] h-full flex flex-col justify-between">
-          <div className="w-full h-[10%]">
-            
-          </div>
-          <div className="w-full h-3/4 flex justify-between">
-           
-          <ProductForm />
-
+        <div className="w-[80%] flex flex-col ">
+          <div className="flex flex-row justify-between">
+            <ProductForm />
           </div>
 
           <Tabel />

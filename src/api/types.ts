@@ -30,13 +30,18 @@ export interface ChangeProductDto {
   category?: string;
 }
 export interface UserDto {
-  id: string;
-  createdAt: Date;
-  updatedAt: Date;
-  deletedAt: Date;
   email: string;
   firstName: string;
   lastName: string;
-  phoneNumber: string;
   role: string;
+  phoneNumber: string;
+  id?: string;
+  createdAt?: Date;
+  updatedAt?: Date;
+  deletedAt?: Date;
+}
+export interface ChangeUserDto {
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
 }

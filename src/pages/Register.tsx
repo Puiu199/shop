@@ -7,6 +7,8 @@ const pattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/;
 const Register = () => {
   const navigate = useNavigate();
   const [name, setName] = useState<string>("");
+  const [lastName, setLastName] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [emailErrors, setEmailError] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -20,13 +22,15 @@ const Register = () => {
       setPasswordError("");
     }
 
-    if (email && password && confirmPassword) {
+    if (email && password && confirmPassword && lastName && phoneNumber) {
       if (password !== confirmPassword) {
         return console.log("Password doesn't match");
       }
 
       const registerData = {
         firstName: name,
+        lastName: lastName,
+        phoneNumber: phoneNumber,
         email: email,
         password: password,
       };
@@ -59,6 +63,24 @@ const Register = () => {
               onChange={(e) => setName(e.target.value)}
               className="w-full border-1 border-[#3d0793] rounded-xl p-2 mt-1 placeholder:text-[#ab96d3]"
               placeholder="Enter your name"
+              type="text"
+            />
+          </div>
+          <div className="my-2">
+            <label className="text-lg font-medium">LastName</label>
+            <input
+              onChange={(e) => setLastName(e.target.value)}
+              className="w-full border-1 border-[#3d0793] rounded-xl p-2 mt-1 placeholder:text-[#ab96d3]"
+              placeholder="Enter Your Last Name"
+              type="text"
+            />
+          </div>
+          <div className="my-2">
+            <label className="text-lg font-medium">Phone number</label>
+            <input
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              className="w-full border-1 border-[#3d0793] rounded-xl p-2 mt-1 placeholder:text-[#ab96d3]"
+              placeholder="Enter Your Last Name"
               type="text"
             />
           </div>

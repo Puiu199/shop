@@ -18,7 +18,7 @@ function ChangeProductForm() {
   }
 
   return (
-    <div className="bg-[#1f2148] rounded-lg shadow-lg w-full h-1/2 p-3">
+    <div className="bg-[#10121b] rounded-lg shadow-lg w-full  p-10">
       <div className="w-full h-1/3 relative flex items-center justify-center">
         <input
           onChange={(e) => setChangeProductName(e.target.value)}

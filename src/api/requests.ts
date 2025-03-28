@@ -1,5 +1,5 @@
 import axiosClient from ".";
-import { ChangeProductDto, LoginDto, UserDto } from "./types";
+import { ChangeProductDto, ChangeUserDto, LoginDto, UserDto } from "./types";
 import { ProductDto } from "./types";
 
 export const logIn = async (loginData: LoginDto) => {
@@ -26,11 +26,14 @@ export const createProduct = async (productData: ProductDto): Promise<ProductDto
   return await axiosClient.post("/product", productData);
 };
 
-
 export const getUser = async (): Promise<UserDto> => {
-    return await axiosClient.get("/user/profile/myself").then(response => response.data)
-}
+  return await axiosClient.get("/user/profile/myself").then((response) => response.data);
+};
 
-export const changeProduct = async (productId:string,productData: ChangeProductDto): Promise<ChangeProductDto> => {
+export const changeProduct = async (productId: string, productData: ChangeProductDto): Promise<ChangeProductDto> => {
   return await axiosClient.patch(`/product/${productId}`, productData);
+};
+
+export const changeUserDto = async (userData: ChangeUserDto) => {
+  return await axiosClient.patch(`/user/profile/`, userData);
 };
