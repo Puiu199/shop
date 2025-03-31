@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router";
 
 export default function UserNaviBar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { setUser } = useUserStore();
   const {
     data: user,
@@ -21,6 +21,13 @@ export default function UserNaviBar() {
   useEffect(() => {
     setUser(user || null);
   }, [user]);
+
+  const handleLogOut = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    setUser(null);
+    navigate("/login");
+  };
 
   // const [user, setUser] = useState<UserDto | null>(null);
   // const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -49,11 +56,11 @@ export default function UserNaviBar() {
             <span>{error.message}</span>
           ) : (
             <div className="mb-8">
-              {`${user?.firstName || ""} ${user?.firstName || "No name"}`}
+              {`${user?.firstName || "No name"}`}
               <br />
-              {`${user?.lastName || ""} ${user?.lastName || "No Last Name"}`}
+              {`${user?.lastName || "No Last Name"}`}
               <br />
-              {`${user?.phoneNumber || ""} ${user?.phoneNumber || "No Phone Number"}`}
+              {`${user?.phoneNumber || "No Phone Number"}`}
               <br />
               <span>{user?.email || ""} </span>
               <br />
@@ -78,7 +85,7 @@ export default function UserNaviBar() {
         </a>
 
         <div
-        onClick={() => navigate("/settings")}
+          onClick={() => navigate("/settings")}
           className="w-full py-3 text-center hover:bg-gray-100 transition-colors text-white-600 hover:text-gray-900"
         >
           ⚙️ Settings
@@ -94,12 +101,12 @@ export default function UserNaviBar() {
           </span>
         </a>
       </nav>{" "}
-      <a
-        href="#logOut"
+      <div
+        onClick={handleLogOut}
         className="absolute bottom-4 w-full py-3 text-center hover:bg-gray-100 transition-colors text-white-600 hover:text-gray-900"
       >
         ⍈ log out
-      </a>
+      </div>
     </div>
   );
 }

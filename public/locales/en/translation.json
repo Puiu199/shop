@@ -1,3 +1,16 @@
 {
-    "hell": "hell"
+   "about-us" : {
+    "page-name": "About Us",
+    "title": "Welcome to Ulim Wolfs!",
+    "description": "At Ulim Wolfs, we are passionate about technology, especially application development and software. Discover a world of high-quality products, specially selected for you. Shopping has become easy, safe and enjoyable. Our mission is . We believe in innovation, sustainability and a grateful and satisfied customer, and these principles guide everything we do. We are distinguished by our commitment to offerings such as quality, creativity or a customer-centric approach. Whether you are a target audience such as a business owner, a student or an enthusiast, we are here to meet your needs, solve your problems or inspire you to the right path. Our team consists of experienced professionals, creative people or industry experts. Together, we strive to change the world for the better, push the boundaries or provide excellence. Thank you for choosing Ulim Wolfs! We are excited to have you on this journey with us and look forward to engaging with our audience, being of service to you, and working with you to grow together and discover new horizons!",
+    "second-title": "Let's discover new horizons together!",
+    "home-button": "Home page" 
+   }, 
+   "settings": {
+    "title": "Update Your Information",
+    "change-name":"Change your Name",
+    "change-last-name": "Change your Last Name",
+    "phone-number": "Phone Number",
+    "save": "Set Changes"
+   }
 }
