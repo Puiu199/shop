@@ -18,7 +18,7 @@ export const refresh = async () => {
     },
   });
 };
-export const getProducts = async (order: "ASC" | "DESC", page: number, take: number) => {
+export const getProducts = async (page: number, take: number, order: "ASC" | "DESC") => {
   return await axiosClient.get(`/product?order=${order}&page=${page}&take=${take}`);
 };
 

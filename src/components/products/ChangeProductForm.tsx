@@ -1,20 +1,31 @@
 import { useState } from "react";
 import { changeProduct } from "../../api/requests";
+import useProduct from "../../store/useProduct";
 
 function ChangeProductForm() {
+  const { product, setProductName, setProductPrice, setProductCategory } = useProduct();
   const [changeProductName, setChangeProductName] = useState<string>("");
   const [changeProductPrice, setChangeProductPrice] = useState<string>("");
   const [changeProductCategory, setChangeProductCategory] = useState<string>("");
 
   function changeName() {
-    changeProduct("411a3450-a44a-42a2-b6bc-3469d9a8c5b1", { name: changeProductName });
+    changeProduct(product.id, { name: changeProductName }).then(() => {
+      setProductName(changeProductName);
+      setChangeProductName("");
+    });
   }
 
   function changePrice() {
-    changeProduct("", { price: +changeProductPrice });
+    changeProduct(product.id, { price: +changeProductPrice }).then(() => {
+      setProductPrice(+changeProductPrice);
+      setChangeProductPrice("");
+    });
   }
   function changeCategory() {
-    changeProduct("", { category: changeProductCategory });
+    changeProduct(product.id, { category: changeProductCategory }).then(() => {
+      setProductCategory(changeProductCategory);
+      setProductCategory("");
+    });
   }
 
   return (
