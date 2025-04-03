@@ -2,6 +2,7 @@ import "./../assets/icons/av6584c34aabb39f00a10.png";
 import Tabel from "../components/products/Tabel";
 import UserNaviBar from "../components/products/UserNaviBar";
 import ProductForm from "../components/products/ProductForm";
+
 const Products = () => {
   return (
     <div className="bg-gradient-to-b from-gray-900 to-green-900 min-h-screen">
