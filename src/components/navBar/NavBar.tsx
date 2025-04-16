@@ -17,6 +17,9 @@ export default function NavBar() {
             Services
           </a>
         </li>
+        <li>
+          <a href="/test">Test</a>
+        </li>
       </ul>
 
       <div className="flex space-x-4">

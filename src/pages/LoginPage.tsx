@@ -1,12 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { logIn } from "../api/requests";
 import { useNavigate } from "react-router";
 const LoginForm = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  
-
   const submitForm = () => {
     if (email && password) {
       logIn({
@@ -19,6 +17,19 @@ const LoginForm = () => {
       });
     }
   };
+
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const handleKeyPress = (event: any) => {
+      if (event.key === "Enter") {
+        submitForm();
+      }
+    };
+    window.addEventListener("keypress", handleKeyPress);
+    return () => {
+      window.removeEventListener("keypress", handleKeyPress);
+    };
+  }, []);
 
   return (
     <div className="flex items-center justify-center bg-blue-200 h-screen">

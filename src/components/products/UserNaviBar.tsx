@@ -103,7 +103,7 @@ export default function UserNaviBar() {
       </nav>{" "}
       <div
         onClick={handleLogOut}
-        className="absolute bottom-4 w-full py-3 text-center hover:bg-gray-100 transition-colors text-white-600 hover:text-gray-900"
+        className="absolute bottom-4 w-full py-3 text-center transition-colors text-white-600 hover:text-gray-900"
       >
         ⍈ log out
       </div>

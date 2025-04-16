@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { createProduct } from "../../api/requests";
 import useProduct from "../../store/useProduct";
+import ModalTailwind from "../modal/ModalTailwind";
 
 function AddProductForm() {
   const [productName, setProductName] = useState<string>("");
   const [productPrice, setProductPrice] = useState<string>("");
   const [productCategory, setProductCategory] = useState<string>("");
+  const [shown, setShown] = useState<boolean>(false);
 
   const { setProduct } = useProduct();
 
@@ -45,12 +47,14 @@ function AddProductForm() {
       />
       <button
         onClick={() => {
-          handleAddButton();
+          // handleAddButton();
+          setShown(true);
         }}
         className="text-white text-b font-bold bg-green-500 w-full border-1 border-black rounded-xl p-2 mt-1"
       >
         Add Product
       </button>
+      {shown && <ModalTailwind open={shown} setOpen={setShown} />}
     </div>
   );
 }
