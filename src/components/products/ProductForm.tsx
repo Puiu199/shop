@@ -7,7 +7,7 @@ const ProductForm = () => {
 
   return (
     <div className="flex items-center justify-center w-full mt-30">
-      <div className="bg-[#10121b] shadow-[0_0_10px_#2ecc71]  p-8 rounded-lg shadow-lg w-[50%] h-[92%] flex justify-around">
+      <div className="bg-[#10121b] shadow-[0_0_10px_#2ecc71]  p-8 rounded-lg w-[50%] h-[92%] flex justify-around">
         <div className="w-1/3 h-full flex flex-col justify-center rounded-lg shadow-lg text-white text-2xl gap-10">
           <h1>Product Name: {product?.name}</h1>
           <h1>Product Price: {product?.price}</h1>
