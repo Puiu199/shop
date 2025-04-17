@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function NavBar() {
   return (
     <nav className="flex items-center justify-between bg-violet-950 px-6 py-3 text-white">
@@ -8,14 +10,24 @@ export default function NavBar() {
           </a>
         </li>
         <li>
-          <a href="/aboutus" className="text-white hover:text-blue-300 transition">
+          <Link to="/aboutus" className="text-white hover:text-blue-300 transition">
             About Us
-          </a>
+          </Link>
         </li>
         <li>
           <a href="/services" className="text-white hover:text-blue-300 transition">
             Services
           </a>
+        </li>
+        <li>
+          <Link to="/dam" className="text-white hover:text-blue-300 transition">
+            Quiger
+          </Link>
+        </li>
+        <li>
+          <Link to="/settings" className="text-white hover:text-blue-300 transition">
+            Settings
+          </Link>
         </li>
       </ul>
 

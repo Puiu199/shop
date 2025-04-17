@@ -6,10 +6,20 @@ import LayoutNavBar from "./components/layout/LayoutNavBar";
 import ErrorPage from "./pages/ErrorPage";
 import Products from "./pages/Products";
 import Settings from "./pages/Settings";
+import Test from "./pages/Test";
+import Trigger from "./pages/Trigger";
 
 export const routerList = [
   {
     path: "/",
+    element: (
+      <LayoutNavBar>
+        <Test />
+      </LayoutNavBar>
+    ),
+  },
+  {
+    path: "/dam",
     element: (
       <LayoutNavBar>
         <LandingPage />

@@ -2,11 +2,16 @@ import { useState } from "react";
 import { changeUser } from "../../api/requests";
 import useUserStore from "../../store/useUserStore";
 import { useTranslation } from "react-i18next";
+import CustomPopover from "../popovers/CustomPopover";
+import ToolTip from "../ToolTip";
+import Accordion from "../Accordion";
+
 const UserSettings = () => {
   const { user, setUser } = useUserStore();
   const [firstName, setName] = useState<string>(user?.firstName || "");
   const [lastName, setLastName] = useState<string>(user?.lastName || "");
   const [phoneNumber, setPhoneNumber] = useState<string>(user?.phoneNumber || "");
+  const [isOpen, setIsOpen] = useState(false);
 
   const { t, i18n } = useTranslation();
 
@@ -46,6 +51,14 @@ const UserSettings = () => {
             placeholder="Enter your name"
           />
         </div>
+
+        <CustomPopover id="sgmkamoa" />
+        <CustomPopover id="gekj" />
+        <CustomPopover id="21rkm" />
+        <ToolTip />
+        <ToolTip />
+        <ToolTip />
+        <Accordion />
 
         <div className="flex flex-col space-y-2">
           <label className="text-sm font-medium text-gray-700">{t("settings.change-last-name")}</label>
